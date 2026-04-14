@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.gestionaudit.controllers.UserDashboardController"
+      stylesheets="@../styles/modern.css"
+      styleClass="app-shell"
+      prefWidth="1200" prefHeight="800">
+
+    <HBox alignment="CENTER_LEFT" spacing="24" styleClass="top-nav">
+        <padding>
+            <Insets top="16" right="32" bottom="16" left="32"/>
+        </padding>
+        <Label text="Gestion Audit" styleClass="brand-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="btnReclamations" text="Mes Réclamations" styleClass="nav-link" onAction="#showReclamations"/>
+            <Button fx:id="btnChatbot" text="IA Chatbot" styleClass="nav-link" onAction="#showChatbot"/>
+        </HBox>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Déconnexion" styleClass="btn, btn-outline, nav-logout" onAction="#handleLogout"/>
+    </HBox>
+
+    <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS" styleClass="content-area"/>
+
+</VBox>

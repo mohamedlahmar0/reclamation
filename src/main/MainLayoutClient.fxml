@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controllers.MainLayoutClientController"
+            prefHeight="740.0" prefWidth="1300.0"
+            stylesheets="@MainLayoutClient.css">
+
+    <!-- Sidebar -->
+    <VBox fx:id="sidebar" styleClass="sidebar" prefWidth="250.0"
+          AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+        <padding>
+            <Insets top="20" right="10" bottom="20" left="10"/>
+        </padding>
+        <Label text="Menu" styleClass="sidebar-title"/>
+        <Button text="Cours" styleClass="sidebar-button" onAction="#navigateToCoursList"/>
+        <Button text="Mes Réservations" styleClass="sidebar-button" onAction="#navigateToReservationList"/>
+        <Button text="Déconnexion" styleClass="sidebar-button" onAction="#logout"/>
+    </VBox>
+
+    <!-- Navbar -->
+    <HBox fx:id="navbar" styleClass="navbar" prefHeight="60.0"
+          AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0">
+        <padding>
+            <Insets top="10" right="20" bottom="10" left="20"/>
+        </padding>
+        <Label fx:id="navbarTitle" text="Tableau de Bord" styleClass="navbar-title"/>
+    </HBox>
+
+    <!-- Content Pane -->
+    <AnchorPane fx:id="contentPane" styleClass="content-pane"
+                AnchorPane.topAnchor="60.0" AnchorPane.leftAnchor="250.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0"/>
+
+</AnchorPane>
