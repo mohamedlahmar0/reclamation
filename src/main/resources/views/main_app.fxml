@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.TextAlignment?>
+
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.gestionaudit.controllers.MainAppController"
+           stylesheets="@../styles/modern.css"
+           styleClass="landing-root">
+
+    <VBox alignment="CENTER" spacing="28" styleClass="landing-card" maxWidth="560">
+        <padding>
+            <Insets top="48" right="48" bottom="52" left="48"/>
+        </padding>
+
+        <Label text="Gestion Audit" styleClass="landing-kicker"/>
+        <Label text="Système de Gestion des Réclamations" styleClass="landing-title" wrapText="true" textAlignment="CENTER"/>
+        <Label text="Réclamations, messagerie, IA et statistiques — une interface pensée pour la clarté."
+               styleClass="landing-sub" wrapText="true" textAlignment="CENTER" maxWidth="460"/>
+
+        <HBox spacing="18" alignment="CENTER">
+            <Button text="Espace Client" onAction="#goToClient" prefWidth="220" prefHeight="92"
+                    styleClass="btn, btn-primary, landing-cta" wrapText="true"/>
+            <Button text="Espace Admin" onAction="#goToAdmin" prefWidth="220" prefHeight="92"
+                    styleClass="btn, btn-success, landing-cta" wrapText="true"/>
+        </HBox>
+    </VBox>
+</StackPane>

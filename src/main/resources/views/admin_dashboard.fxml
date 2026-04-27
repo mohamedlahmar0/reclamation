@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gestionaudit.controllers.AdminDashboardController"
+            stylesheets="@../styles/modern.css"
+            styleClass="app-shell admin-shell"
+            prefWidth="1200" prefHeight="800">
+
+    <left>
+        <VBox styleClass="sidebar" prefWidth="260" spacing="8">
+            <padding>
+                <Insets top="24" right="16" bottom="24" left="16"/>
+            </padding>
+            <Label text="Gestion Audit" styleClass="sidebar-kicker"/>
+            <Label text="Administration" styleClass="sidebar-brand"/>
+            <Region prefHeight="12"/>
+            <Button fx:id="btnReclamations" text="Réclamations" styleClass="sidebar-button" onAction="#showReclamations" maxWidth="Infinity"/>
+            <Button fx:id="btnStats" text="Tableau de bord &amp; stats" styleClass="sidebar-button" onAction="#showStats" maxWidth="Infinity"/>
+            <Button fx:id="btnMessages" text="Messagerie" styleClass="sidebar-button" onAction="#showMessages" maxWidth="Infinity"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button text="Se déconnecter" styleClass="sidebar-button sidebar-logout" onAction="#handleLogout" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area admin-content"/>
+    </center>
+
+</BorderPane>
